@@ -23,6 +23,15 @@ class IndexViewController: UIViewController {
     // 小说分类数据
     var categories = [Category]();
     
+    // 加载中菊花
+    var loadingView: UIActivityIndicatorView!;
+    
+    // 我的收藏
+    @IBOutlet weak var favoriteCollectionView: FavoriteCollectionView!
+    
+    // 数据库
+    let bookDao = BookDao();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,14 +40,21 @@ class IndexViewController: UIViewController {
         initData();
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // 加载我的收藏
+        let books = bookDao.findAllFavoriteBooks();
+        self.favoriteCollectionView.loadData(books);
     }
 
     // 初始化界面
     func initView() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
+        
+        // 修改返回按钮
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        
         // 搜索框
         searchTextField.layer.borderWidth = 1;
         searchTextField.layer.cornerRadius = 3;
@@ -52,8 +68,13 @@ class IndexViewController: UIViewController {
         categoryCollectionView.delegate = categoryCollectionView;
         categoryCollectionView.dataSource = categoryCollectionView;
         
+        favoriteCollectionView.delegate = favoriteCollectionView;
+        favoriteCollectionView.dataSource = favoriteCollectionView;
+        
         // 引用传递
         categoryCollectionView.viewController = self;
+        favoriteCollectionView.viewController = self
+        
     }
     
     // 初始化数据
@@ -64,6 +85,10 @@ class IndexViewController: UIViewController {
             Http.post(UrlConstants.CATEGORY_ALL, callback: categoryCallback);
             
         }
+        
+        // 加载我的收藏
+        let books = bookDao.findAllFavoriteBooks();
+        self.favoriteCollectionView.loadData(books);
     }
     
     // 加载小说分类的回调
@@ -88,5 +113,85 @@ class IndexViewController: UIViewController {
             Toast.showMessage("网络错误，无法加载小说分类", onView: self.view);
         }
     }
+    
+    // 结束输入（立即搜索）
+    @IBAction func end(_ sender: Any) {
+        search(sender);
+    }
+    
+    // 搜索
+    @IBAction func search(_ sender: Any) {
+        if isLoading() {
+            return;
+        }
+        
+        // 收起键盘
+        UIApplication.shared.keyWindow?.endEditing(true);
+        
+        // 焦点给搜索按钮
+        searchButton.becomeFirstResponder();
+        
+        // 关键字
+        let key = searchTextField.text!;
+        
+        // 判断非空
+        if key.isEmpty {
+            Toast.showMessage("请输入搜索内容！", onView: self.view);
+            return;
+        }
+        
+        // 加载中菊花
+        loadingView = ViewUtil.loadingView(self.view);
+        
+        // 异步加载
+        Http.post(UrlConstants.BOOK_SEARCH, params: ["key": key], callback: bookSearchCallback)
+    }
+    
+    // 搜索小说的回调
+    func bookSearchCallback(res: HTTPResult) {
+        stopLoading();
+        
+        let result = Http.parse(res);
+        
+        var resBooks = [Book]();
+        if result.0 {
+            let books = result.2["books"] as! NSArray;
+            for b in books {
+                let bk = b as! NSDictionary
+                let book = Book(bk);
+                
+                resBooks.append(book);
+            }
+        } else {
+            Toast.showMessage(result.1, onView: self.view)
+            return;
+        }
+        
+        if resBooks.isEmpty {
+            Toast.showMessage("没有符合条件的小说", onView: self.view);
+            return;
+        }
+        
+        DispatchQueue.main.async {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookTableViewController") as! BookTableViewController;
+            vc.books = resBooks;
+            vc.refreshNav("搜索结果")
+            self.navigationController?.pushViewController(vc, animated: true);
+        }
+    }
+    
+    // 判断是否正在加载
+    func isLoading() -> Bool {
+        return loadingView != nil && loadingView.isAnimating;
+    }
+    
+    // 停止加载中动画
+    func stopLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.stopAnimating();
+            self.loadingView.removeFromSuperview();
+        }
+    }
+    
 }
 

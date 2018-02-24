@@ -30,6 +30,7 @@ class CategoryCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
         self.reloadData();
     }
     
+    
     // collection view //
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
@@ -82,12 +83,12 @@ class CategoryCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
             return;
         }
         
-//        DispatchQueue.main.async {
-//            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BookTableViewController") as! BookTableViewController;
-//            vc.books = resBooks;
-//            vc.refreshNav(self.selectedCategory.name)
-//            self.viewController.navigationController?.pushViewController(vc, animated: true);
-//        }
+        DispatchQueue.main.async {
+            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BookTableViewController") as! BookTableViewController;
+            vc.books = resBooks;
+            vc.refreshNav(self.selectedCategory.name)
+            self.viewController.navigationController?.pushViewController(vc, animated: true);
+        }
     }
     
     // 判断是否正在加载

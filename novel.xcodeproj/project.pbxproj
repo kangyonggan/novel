@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112EC77C2041870F0078B801 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC77B2041870F0078B801 /* BookTableViewController.swift */; };
+		112EC77E204187AA0078B801 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC77D204187AA0078B801 /* Section.swift */; };
+		112EC781204187E50078B801 /* BookDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC780204187E50078B801 /* BookDao.swift */; };
+		112EC783204188030078B801 /* SectionDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC782204188030078B801 /* SectionDao.swift */; };
+		112EC785204188300078B801 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC784204188300078B801 /* BookTableViewCell.swift */; };
+		112EC7872041888F0078B801 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC7862041888F0078B801 /* CacheImage.swift */; };
+		112EC789204188A50078B801 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC788204188A50078B801 /* FileUtil.swift */; };
+		112EC78B20418DF60078B801 /* SectionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC78A20418DF60078B801 /* SectionDetailController.swift */; };
+		112EC78D20418E6F0078B801 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC78C20418E6F0078B801 /* Dictionary.swift */; };
+		112EC78F20418E830078B801 /* DictionaryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC78E20418E830078B801 /* DictionaryDao.swift */; };
+		112EC79120418EFF0078B801 /* DictionaryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC79020418EFF0078B801 /* DictionaryKey.swift */; };
+		112EC793204190250078B801 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC792204190250078B801 /* SettingController.swift */; };
+		112EC795204190610078B801 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC794204190610078B801 /* SectionTableViewController.swift */; };
+		112EC797204190810078B801 /* SectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC796204190810078B801 /* SectionTableCell.swift */; };
+		112EC79920419ADE0078B801 /* ThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC79820419ADE0078B801 /* ThemeTableViewController.swift */; };
+		112EC79B20419AED0078B801 /* ThemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC79A20419AED0078B801 /* ThemeTableCell.swift */; };
+		112EC79D20419EA00078B801 /* FavoriteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC79C20419EA00078B801 /* FavoriteCollectionView.swift */; };
+		112EC79F20419EC40078B801 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC79E20419EC40078B801 /* FavoriteCollectionCell.swift */; };
 		11C69A6320412AC600885AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C69A6220412AC600885AF5 /* AppDelegate.swift */; };
 		11C69A6520412AC600885AF5 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C69A6420412AC600885AF5 /* IndexViewController.swift */; };
 		11C69A6820412AC600885AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C69A6620412AC600885AF5 /* Main.storyboard */; };
@@ -26,6 +44,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112EC77B2041870F0078B801 /* BookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		112EC77D204187AA0078B801 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		112EC780204187E50078B801 /* BookDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDao.swift; sourceTree = "<group>"; };
+		112EC782204188030078B801 /* SectionDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDao.swift; sourceTree = "<group>"; };
+		112EC784204188300078B801 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		112EC7862041888F0078B801 /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		112EC788204188A50078B801 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		112EC78A20418DF60078B801 /* SectionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailController.swift; sourceTree = "<group>"; };
+		112EC78C20418E6F0078B801 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		112EC78E20418E830078B801 /* DictionaryDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDao.swift; sourceTree = "<group>"; };
+		112EC79020418EFF0078B801 /* DictionaryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryKey.swift; sourceTree = "<group>"; };
+		112EC792204190250078B801 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		112EC794204190610078B801 /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
+		112EC796204190810078B801 /* SectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableCell.swift; sourceTree = "<group>"; };
+		112EC79820419ADE0078B801 /* ThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTableViewController.swift; sourceTree = "<group>"; };
+		112EC79A20419AED0078B801 /* ThemeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTableCell.swift; sourceTree = "<group>"; };
+		112EC79C20419EA00078B801 /* FavoriteCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionView.swift; sourceTree = "<group>"; };
+		112EC79E20419EC40078B801 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
 		11C69A5F20412AC600885AF5 /* novel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = novel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C69A6220412AC600885AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C69A6420412AC600885AF5 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112EC77F204187DC0078B801 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				112EC780204187E50078B801 /* BookDao.swift */,
+				112EC782204188030078B801 /* SectionDao.swift */,
+				112EC78E20418E830078B801 /* DictionaryDao.swift */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
 		11C69A5620412AC600885AF5 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,7 @@
 		11C69A6120412AC600885AF5 /* novel */ = {
 			isa = PBXGroup;
 			children = (
+				112EC77F204187DC0078B801 /* dao */,
 				11C69A892041317300885AF5 /* view */,
 				11C69A882041314900885AF5 /* constants */,
 				11C69A872041314200885AF5 /* util */,
@@ -102,6 +149,8 @@
 			children = (
 				11C69A7B20412F5B00885AF5 /* Category.swift */,
 				11C69A8A2041319F00885AF5 /* Book.swift */,
+				112EC77D204187AA0078B801 /* Section.swift */,
+				112EC78C20418E6F0078B801 /* Dictionary.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -110,6 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				11C69A6420412AC600885AF5 /* IndexViewController.swift */,
+				112EC77B2041870F0078B801 /* BookTableViewController.swift */,
+				112EC78A20418DF60078B801 /* SectionDetailController.swift */,
+				112EC794204190610078B801 /* SectionTableViewController.swift */,
+				112EC792204190250078B801 /* SettingController.swift */,
+				112EC79820419ADE0078B801 /* ThemeTableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -120,6 +174,8 @@
 				11C69A7F20412FB700885AF5 /* Http.swift */,
 				11C69A7720412E2F00885AF5 /* ViewUtil.swift */,
 				11C69A8C2041326800885AF5 /* Toast.swift */,
+				112EC7862041888F0078B801 /* CacheImage.swift */,
+				112EC788204188A50078B801 /* FileUtil.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -128,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				11C69A7D20412F7B00885AF5 /* UrlConstants.swift */,
+				112EC79020418EFF0078B801 /* DictionaryKey.swift */,
 			);
 			path = constants;
 			sourceTree = "<group>";
@@ -137,6 +194,11 @@
 			children = (
 				11C69A81204130CB00885AF5 /* CategoryCollectionView.swift */,
 				11C69A832041310600885AF5 /* CategoryCollectionCell.swift */,
+				112EC784204188300078B801 /* BookTableViewCell.swift */,
+				112EC796204190810078B801 /* SectionTableCell.swift */,
+				112EC79A20419AED0078B801 /* ThemeTableCell.swift */,
+				112EC79C20419EA00078B801 /* FavoriteCollectionView.swift */,
+				112EC79E20419EC40078B801 /* FavoriteCollectionCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -289,17 +351,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112EC78F20418E830078B801 /* DictionaryDao.swift in Sources */,
 				11C69A6B20412AC600885AF5 /* novel.xcdatamodeld in Sources */,
 				11C69A8D2041326800885AF5 /* Toast.swift in Sources */,
 				11C69A6520412AC600885AF5 /* IndexViewController.swift in Sources */,
+				112EC77E204187AA0078B801 /* Section.swift in Sources */,
+				112EC783204188030078B801 /* SectionDao.swift in Sources */,
+				112EC785204188300078B801 /* BookTableViewCell.swift in Sources */,
+				112EC781204187E50078B801 /* BookDao.swift in Sources */,
 				11C69A7E20412F7B00885AF5 /* UrlConstants.swift in Sources */,
 				11C69A8B2041319F00885AF5 /* Book.swift in Sources */,
 				11C69A7820412E2F00885AF5 /* ViewUtil.swift in Sources */,
+				112EC77C2041870F0078B801 /* BookTableViewController.swift in Sources */,
+				112EC793204190250078B801 /* SettingController.swift in Sources */,
+				112EC78D20418E6F0078B801 /* Dictionary.swift in Sources */,
+				112EC79D20419EA00078B801 /* FavoriteCollectionView.swift in Sources */,
+				112EC789204188A50078B801 /* FileUtil.swift in Sources */,
+				112EC79920419ADE0078B801 /* ThemeTableViewController.swift in Sources */,
+				112EC795204190610078B801 /* SectionTableViewController.swift in Sources */,
 				11C69A6320412AC600885AF5 /* AppDelegate.swift in Sources */,
+				112EC7872041888F0078B801 /* CacheImage.swift in Sources */,
 				11C69A842041310600885AF5 /* CategoryCollectionCell.swift in Sources */,
 				11C69A82204130CB00885AF5 /* CategoryCollectionView.swift in Sources */,
+				112EC79120418EFF0078B801 /* DictionaryKey.swift in Sources */,
+				112EC78B20418DF60078B801 /* SectionDetailController.swift in Sources */,
+				112EC797204190810078B801 /* SectionTableCell.swift in Sources */,
+				112EC79F20419EC40078B801 /* FavoriteCollectionCell.swift in Sources */,
 				11C69A8020412FB700885AF5 /* Http.swift in Sources */,
 				11C69A7A20412E4B00885AF5 /* AppConstants.swift in Sources */,
+				112EC79B20419AED0078B801 /* ThemeTableCell.swift in Sources */,
 				11C69A7C20412F5B00885AF5 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
