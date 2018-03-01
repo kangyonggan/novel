@@ -18,6 +18,8 @@ class CategoryCollectionCell: UICollectionViewCell {
     func initData(_ category: Category) {
         nameLabel.text = category.name;
         bookCntLabel.text = "\(category.bookCnt!) 本";
+        
+        
     }
     
 }
